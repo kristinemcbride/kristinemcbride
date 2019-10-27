@@ -1,0 +1,17 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 4rem;
+    justify-content: flex-end;
+    li {
+      padding: 20px;
+      font-family: $second_font;
+      color: $accent_2;
+      font-size: 24px;
+    }
+  }
+}
