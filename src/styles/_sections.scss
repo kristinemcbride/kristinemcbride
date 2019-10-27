@@ -1,0 +1,59 @@
+@import './colours.scss';
+@import './fonts.scss';
+
+.section {
+  min-height: 750px;
+  color: $accent_1;
+  font-family: $first_font;
+  display: flex;
+  align-items: center;
+
+  .sub-title {
+    transform: rotate(-90deg);
+    font-size: 70px;
+    width: 0;
+    margin-left: 68px;
+    transform-origin: bottom;
+  }
+
+  .about_items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .item_about_green{
+    transform: translateY(-5em) rotate(-10deg);
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border: 5px solid $accent_1;
+    }
+  }
+
+ .item_about_red {
+   transform: translateY(1em) rotate(15deg);
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    color: $accent_3;
+    border: 5px solid $accent_3;
+    background: $background;
+  }
+
+  .item_about_yellow {
+    transform: translateY(-4em) rotate(-15deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    color: $accent_2;
+    border: 5px solid $accent_2;
+    background: $background;
+  }
+}
