@@ -15,5 +15,9 @@
       color: $accent_2;
       font-size: 24px;
     }
+    li:hover {
+      color: $neutral;
+      cursor: pointer;
+    }
   }
 }

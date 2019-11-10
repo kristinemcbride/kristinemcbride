@@ -7,6 +7,7 @@
   font-family: $first_font;
   display: flex;
   align-items: center;
+  z-index: -2;
 
   .sub-title {
     transform: rotate(-90deg);
@@ -55,5 +56,73 @@
     color: $accent_2;
     border: 5px solid $accent_2;
     background: $background;
+  }
+
+  .svgs {
+    display: flex;
+    flex-direction: columm;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .svg-item {
+      flex: 1 0 calc(100% / 4);
+      display: flex;
+      justify-content: center;
+      svg {
+        width: 130px;
+        height: 130px;
+        background: $background;
+      }
+    }
+
+    .svg-js {
+      transform: translateY(-5em) rotate(-15deg);
+    }
+
+    .svg-html {
+      transform: translateY(3em)  translateX(-4em) rotate(-25deg);
+    }
+
+    .svg-rails {
+      transform: translateY(-4em) translateX(-1em) rotate(20deg);
+    }
+
+    .svg-ruby {
+      transform: translateY(-5em) rotate(20deg);
+    }
+
+    .svg-postgres {
+      transform: translateY(3em) translateX(-3em) rotate(15deg);
+    }
+
+    .svg-react {
+      transform: translateY(-4em) translateX(-2em) rotate(45deg);
+    }
+
+    .svg-sass {
+      transform: translateY(-1em) rotate(5deg);
+    }
+
+    .svg-webpack {
+      transform: translateY(3em) rotate(15deg);
+    }
+
+    .svg-yellow {
+      svg {
+        border: 3px solid $accent_2;
+      }
+    }
+    .svg-blue {
+      // transform: translateY(-6em) rotate(-5deg);
+      svg {
+        border: 3px solid $accent_3;
+      }
+    }
+    .svg-red {
+      // transform: translateY(5em) rotate(15deg);
+      svg {
+        border: 3px solid $accent_1;
+      }
+    }
   }
 }
