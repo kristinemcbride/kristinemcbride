@@ -8,10 +8,11 @@ html, body {
 
 .container {
   width: 100%;
+  padding: 65px;
 
   #canvas {
     background-color: $background;
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -20,24 +21,15 @@ html, body {
 
   }
 
-  .content {
-    height: 100%;
-    width: 100%;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    border-left: 10px solid $accent_1;
+  .main-title {
+    font-family: $first_font;
+    font-size: 70px;
+    color: $neutral;
+    margin-top: 4em;
 
-    .main-title {
+    .accent {
+      color: $accent_1;
       font-family: $first_font;
-      font-size: 70px;
-      color: $neutral;
-      margin-top: 4em;
-
-      .accent {
-        color: $accent_1;
-        font-family: $first_font;
-      }
     }
   }
 }

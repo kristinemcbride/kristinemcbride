@@ -1,8 +1,9 @@
 .nav {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-
 
   ul {
     display: flex;
@@ -10,14 +11,20 @@
     margin-right: 4rem;
     justify-content: flex-end;
     li {
-      padding: 20px;
+      padding: 15px;
       font-family: $second_font;
       color: $accent_2;
-      font-size: 24px;
+      font-size: 20px;
     }
     li:hover {
       color: $neutral;
       cursor: pointer;
     }
   }
+}
+
+.nav__scroll {
+  border-bottom: 1px solid rgba($neutral, 0.1);
+  background-color: rgba(57, 68, 82, 0.9);
+  z-index: 10;
 }

@@ -4,27 +4,21 @@ $envelope-bottom: #ea7179;
   display: none;
   position: fixed;
   z-index: 20;
-  margin: 0 auto;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: rgba($background, 0.4);
-  color: $accent_1;
-  padding: 150px;
-  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
 }
 
 .close {
   color: $accent_1;
-  top: 0;
-  right: 0;
-  font-size: 28px;
+  top: -5px;
+  right: -5px;
+  font-size: 26px;
   font-weight: bold;
   position: absolute;
 }
@@ -44,11 +38,11 @@ input:focus{
    color: $background;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
    color: $background;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {
    color: $background;
 }
 
@@ -57,24 +51,15 @@ input:focus{
 }
 
 
-.l-envelope-container{
-  height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .envelope{
   position: relative;
-  width: 50%;
-  height: 250px;
   transition: all 2s 2s;
-	transform-style: preserve-3d;
-  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform: translateX(-240px);
 
   &__bottom{
-    width: 500px;
-    height: 350px;
+    width: 480px;
+    height: 330px;
     backface-visibility: hidden;
   }
 }
@@ -93,11 +78,11 @@ input:focus{
 }
 
 .form {
-  margin-top: -320px;
+  margin-top: -305px;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px;
-  width: 360px;
+  padding: 10px;
+  width: 340px;
   text-align: center;
   border: 2px solid $accent_1;
   border-radius: 5px;
@@ -108,18 +93,18 @@ input:focus{
   &__input{
     font-size: 14px;
     padding: 10px;
-    margin: 10px ;
-    width: 280px;
+    margin: 10px;
+    width: 270px;
     border: 2px solid $accent_1;
     color: $background;
   }
   &__x-wrapper {
     width: 100%;
-    height: 310px;
+    height: 300px;
     position: relative;
   }
   &__btn{
-    width: 60%;
+    width: 50%;
     height: 40px;
     color: $background;
     margin: 10px auto;
@@ -129,7 +114,7 @@ input:focus{
     border-radius: 5px;
     background: $accent_1;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
   }
   &__btn:hover,
   &__btn:focus {
@@ -143,9 +128,9 @@ input:focus{
   left: -1px;
   width: 0;
   height: 0;
-  border-top: 230px solid $neutral;
-  border-left: 250px solid transparent;
-  border-right: 250px solid transparent;
+  border-top: 210px solid $neutral;
+  border-left: 240px solid transparent;
+  border-right: 240px solid transparent;
   transform:rotatex(180deg);
   transition: all 1s 1.5s;
   transform-style: preserve-3d;
@@ -159,9 +144,9 @@ input:focus{
   right: 0px;
   width: 0;
   height :0;
-  border-top: 175px solid transparent;
-  border-right: 251px solid $accent_1;
-  border-bottom: 175px solid transparent;
+  border-top: 165px solid transparent;
+  border-right: 241px solid $accent_1;
+  border-bottom: 165px solid transparent;
   z-index: 3;
 }
 
@@ -171,9 +156,9 @@ input:focus{
   left: -1px;
   width: 0;
   height: 0;
-  border-bottom: 175px solid $envelope-bottom;
-  border-left: 251px solid transparent;
-  border-right: 251px solid transparent;
+  border-bottom: 165px solid $envelope-bottom;
+  border-left: 241px solid transparent;
+  border-right: 241px solid transparent;
   z-index: 3;
 }
 
@@ -183,9 +168,9 @@ input:focus{
   left: 0px;
   width: 0;
   height: 0;
-  border-top: 175px solid transparent;
-  border-left: 251px solid $accent_1;
-  border-bottom: 175px solid transparent;
+  border-top: 165px solid transparent;
+  border-left: 241px solid $accent_1;
+  border-bottom: 165px solid transparent;
   z-index: 3;
 }
 
