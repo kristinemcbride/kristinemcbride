@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
     top.style.zIndex = "3";
 
     const envelope = document.querySelector(".envelope");
-    envelope.style.transform = "rotatey(180deg) translateX(-250px) translateY(-170px)";
+    envelope.style.transform = "rotatey(180deg) translateX(-240px) translateY(-170px)";
 
     const exit = document.querySelector(".close");
     exit.style.transform = "translateX(-12px) translateY(2px)";

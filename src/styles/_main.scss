@@ -20,16 +20,4 @@ html, body {
     z-index: -5;
 
   }
-
-  .main-title {
-    font-family: $first_font;
-    font-size: 70px;
-    color: $neutral;
-    margin-top: 4em;
-
-    .accent {
-      color: $accent_1;
-      font-family: $first_font;
-    }
-  }
 }

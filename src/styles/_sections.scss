@@ -1,20 +1,56 @@
 @import './colours.scss';
 @import './fonts.scss';
 
+.section-1 {
+  min-height: calc(100vh - 110px);
+  border: 1px solid white;
+  color: $accent_1;
+  font-family: $first_font;
+  display: flex;
+  align-items: flex-end;
+  z-index: -2;
+  margin-bottom: 55px;
+
+  .main-title {
+    font-family: $first_font;
+    font-size: 68px;
+    color: $neutral;
+    padding-bottom: 32px;
+    @include lap {
+      font-size: 56px;
+    }
+
+
+    .accent {
+      color: $accent_1;
+      font-family: $first_font;
+    }
+  }
+}
+
 .section {
-  min-height: 750px;
+  height: calc(100vh - 110px);
+  border: 1px solid white;
   color: $accent_1;
   font-family: $first_font;
   display: flex;
   align-items: center;
   z-index: -2;
+  margin-bottom: 55px;
+
+  @include portable {
+    display: block;
+  }
+
 
   .sub-title {
-    transform: rotate(-90deg);
-    font-size: 70px;
-    width: 0;
-    margin-left: 68px;
-    transform-origin: bottom;
+    @include lap-and-up {
+      transform: translateX(-50%) translateY(-50%) rotate(-90deg) translateY(37px);
+    }
+    h2 {
+      text-align: center;
+      font-size: 60px;
+    }
   }
 
   .about_items {
@@ -22,41 +58,110 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+    @include lap {
+      display: block;
+    }
+    @include portable {
+      padding: 20px;
+    }
   }
 
   .item_about_red{
-    transform: translateY(-5em) rotate(-10deg);
+
     img {
-      width: 300px;
-      height: 300px;
+      @include desk-wide {
+        width: 300px;
+        height: 300px;
+        transform: translateY(-5em) rotate(-10deg);
+      }
+
+      @include sm-desk {
+        width: 240px;
+        height: 240px;
+        transform: translateY(-6em) rotate(-10deg);
+      }
+
+      @include lap {
+        width: 200px;
+        height: 200px;
+        transform: translateY(2em) rotate(-10deg);
+      }
+
+      @include portable {
+      height: 200px;
+      width: 200px;
+     }
+
       object-fit: cover;
       border: 5px solid $accent_1;
     }
   }
 
- .item_about_green {
-   transform: translateY(1em) rotate(15deg);
+  .text_items {
     display: flex;
     align-items: center;
-    height: 300px;
-    width: 300px;
-    padding: 20px;
-    color: $accent_3;
-    border: 5px solid $accent_3;
+    @include desk-wide {
+      height: 300px;
+      width: 300px;
+      padding: 20px;
+      font-size: 20px;
+    }
+    @include sm-desk {
+      height: 240px;
+      width: 240px;
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    @include lap {
+      height: 200px;
+      width: 200px;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @include portable {
+      height: 200px;
+      width: 200px;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    justify-content: center;
     background: $background;
   }
 
+ .item_about_green {
+    @include desk-wide {
+      transform: translateY(6em) rotate(15deg);
+    }
+    @include sm-desk {
+      transform: translateY(6em) rotate(15deg);
+    }
+
+     @include lap {
+      transform: translateY(-2em) translateX(22em) rotate(15deg);
+    }
+
+    color: $accent_3;
+    border: 5px solid $accent_3;
+
+  }
+
   .item_about_yellow {
-    transform: translateY(-4em) rotate(-15deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: 300px;
-    width: 300px;
+    @include desk-wide {
+      transform: translateY(-6em) rotate(-25deg);
+    }
+    @include sm-desk {
+      transform: translateY(-6em) rotate(-25deg);
+    }
+
+     @include lap {
+      transform: translateX(3em) translateY(-3em) rotate(-25deg);
+    }
+
     color: $accent_2;
     border: 5px solid $accent_2;
-    background: $background;
 
     a {
       text-decoration: none;
@@ -78,6 +183,10 @@
       display: flex;
       justify-content: center;
       svg {
+        @include lap {
+          width: 80px;
+          height: 80px;
+        }
         width: 130px;
         height: 130px;
         background: $background;
@@ -85,35 +194,35 @@
     }
 
     .svg-js {
-      transform: translateY(-5em) rotate(-15deg);
+      transform: translateY(-5em)  translateX(-2em) rotate(-15deg);
     }
 
     .svg-html {
-      transform: translateY(3em)  translateX(-4em) rotate(-25deg);
+      transform: translateY(4em)  translateX(-4em) rotate(-25deg);
     }
 
     .svg-rails {
-      transform: translateY(-4em) translateX(-1em) rotate(20deg);
+      transform: translateY(-5em) translateX(-1em) rotate(20deg);
     }
 
     .svg-ruby {
-      transform: translateY(-5em) rotate(20deg);
+      transform: translateY(-6em) rotate(20deg);
     }
 
     .svg-postgres {
-      transform: translateY(3em) translateX(-3em) rotate(15deg);
+      transform: translateY(4em) translateX(-3em) rotate(15deg);
     }
 
     .svg-react {
-      transform: translateY(-4em) translateX(-2em) rotate(45deg);
+      transform: translateY(-5em) translateX(-2em) rotate(45deg);
     }
 
     .svg-sass {
-      transform: translateY(-1em) rotate(5deg);
+      transform: translateY(-2em) rotate(5deg);
     }
 
     .svg-webpack {
-      transform: translateY(3em) rotate(15deg);
+      transform: translateY(4em) rotate(15deg);
     }
 
     .svg-yellow {
