@@ -50,8 +50,62 @@ input:focus{
    color: $background;
 }
 
+.palm-envelope {
+  display: none;
+  @include palm {
+    display: block;
+  }
+  .form {
+  margin-top: -305px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 340px;
+  text-align: center;
+  border: 2px solid $accent_1;
+  border-radius: 5px;
+  box-shadow: 0 0 15px black;
+  background: $background;
+  z-index: 2;
+  transition: all 2s;
+  &__input{
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    width: 270px;
+    border: 2px solid $accent_1;
+    color: $background;
+  }
+  &__x-wrapper {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  &__btn{
+    width: 50%;
+    height: 40px;
+    color: $background;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: $accent_1;
+    cursor: pointer;
+    z-index: 10;
+  }
+  &__btn:hover,
+  &__btn:focus {
+    color: $neutral;
+  }
+}
+}
+
 
 .envelope{
+  @include palm {
+    display: none;
+  }
   position: relative;
   transition: all 2s 2s;
   transform-style: preserve-3d;

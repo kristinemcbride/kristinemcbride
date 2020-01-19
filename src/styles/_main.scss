@@ -9,6 +9,12 @@ html, body {
 .container {
   width: 100%;
   padding: 65px;
+  @include phablet {
+    padding: 40px;
+  }
+  @include palm {
+    padding: 30px;
+  }
 
   #canvas {
     background-color: $background;
